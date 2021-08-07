@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sonarqube</Name>
+  <Repository>sonarqube</Repository>
+  <Registry>https://hub.docker.com/_/sonarqube/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://community.sonarsource.com/c/help/8</Support>
+  <Project>https://github.com/SonarSource/sonarqube</Project>
+  <Overview>SonarQube is an open source platform for continuous inspection of code quality.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:9000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/SonarSource/sonarqube/raw/master/server/sonar-docs/src/images/sonarqube-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1628361953</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>SonarQube is an open source platform for continuous inspection of code quality.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarqube/data</HostDir>
+      <ContainerDir>/opt/sonarqube/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarqube/logs</HostDir>
+      <ContainerDir>/opt/sonarqube/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarqube/extesions</HostDir>
+      <ContainerDir>/opt/sonarqube/extensions</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>SONAR_ES_BOOTSTRAP_CHECKS_DISABLE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="9000" Default="" Mode="tcp" Description="Container Port: 9000" Type="Port" Display="always" Required="false" Mask="false">9000</Config>
+  <Config Name="bootstrapChecks" Target="SONAR_ES_BOOTSTRAP_CHECKS_DISABLE" Default="true" Mode="" Description="Container Variable: SONAR_ES_BOOTSTRAP_CHECKS_DISABLE" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Data" Target="/opt/sonarqube/data" Default="" Mode="rw" Description="Container Path: /opt/sonarqube/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sonarqube/data</Config>
+  <Config Name="Logs" Target="/opt/sonarqube/logs" Default="" Mode="rw" Description="Container Path: /opt/sonarqube/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sonarqube/logs</Config>
+  <Config Name="Extensions" Target="/opt/sonarqube/extensions" Default="" Mode="rw" Description="Container Path: /opt/sonarqube/extensions" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sonarqube/extesions</Config>
+</Container>
