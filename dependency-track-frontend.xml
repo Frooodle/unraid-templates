@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Dependency-Track-FrontEnd</Name>
+  <Repository>dependencytrack/frontend</Repository>
+  <Registry>dependencytrack/frontend</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/DependencyTrack/dependency-track/issues</Support>
+  <Project>dependencytrack.org</Project>
+  <Overview>Front end to be used with Dependency-Track API Server&#xD;
+Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain. Dependency-Track takes a unique and highly beneficial approach by leveraging the capabilities of Software Bill of Materials (SBOM). This approach provides capabilities that traditional Software Composition Analysis (SCA) solutions cannot achieve.&#xD;
+For more details about Dependency-Track see the projects website at dependencytrack.org&#xD;
+&#xD;
+Default Login  username: admin  password: admin </Overview>
+  <Category>Security:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/DependencyTrack/dependency-track/raw/master/docs/touch-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1628448349</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Front end to be used with Dependency-Track API Server&#xD;
+Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain. Dependency-Track takes a unique and highly beneficial approach by leveraging the capabilities of Software Bill of Materials (SBOM). This approach provides capabilities that traditional Software Composition Analysis (SCA) solutions cannot achieve.&#xD;
+For more details about Dependency-Track see the projects website at dependencytrack.org&#xD;
+&#xD;
+Default Login  username: admin  password: admin </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>http://192.168.50.252:8081</Value>
+      <Name>API_BASE_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="URL_OF_API_SERVER" Target="API_BASE_URL" Default="http://192.168.1.10:8081" Mode="" Description="HTTP URL of Dep-track API Server, Port must match API Port" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.50.252:8081</Config>
+  <Config Name="WebUI Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8082</Config>
+</Container>
