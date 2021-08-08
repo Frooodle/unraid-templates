@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>sonarqube</Name>
+  <Name>SonarQube</Name>
   <Repository>sonarqube</Repository>
   <Registry>https://hub.docker.com/_/sonarqube/</Registry>
   <Network>bridge</Network>
