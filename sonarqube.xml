@@ -9,7 +9,10 @@
   <Privileged>false</Privileged>
   <Support>https://community.sonarsource.com/c/help/8</Support>
   <Project>https://github.com/SonarSource/sonarqube</Project>
-  <Overview>SonarQube is an open source platform for continuous inspection of code quality.</Overview>
+  <Overview>SonarQube is an open source platform for continuous inspection of code quality.   &#xD;
+By default, the image will use an embedded H2 database that is not suited for production. &#xD;
+You can set up a database by following the "Installing the Database" section of https://docs.sonarqube.org/latest/setup/install-server/ (Requires seperate DB to be installed and linked)&#xD;
+  </Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:9000]</WebUI>
   <TemplateURL/>
@@ -20,7 +23,10 @@
   <DateInstalled>1628361953</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>SonarQube is an open source platform for continuous inspection of code quality.</Description>
+  <Description>SonarQube is an open source platform for continuous inspection of code quality.   &#xD;
+By default, the image will use an embedded H2 database that is not suited for production. &#xD;
+You can set up a database by following the "Installing the Database" section of https://docs.sonarqube.org/latest/setup/install-server/ (Requires seperate DB to be installed and linked)&#xD;
+  </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
