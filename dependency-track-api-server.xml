@@ -11,7 +11,7 @@
   <Project>dependencytrack.org</Project>
   <Overview>API Server to be used with Dependency-Track Front-End&#xD;
 Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain. Dependency-Track takes a unique and highly beneficial approach by leveraging the capabilities of Software Bill of Materials (SBOM). This approach provides capabilities that traditional Software Composition Analysis (SCA) solutions cannot achieve.&#xD;
-For more details about Dependency-Track see the projects website at dependencytrack.org</Overview>
+For more details about Dependency-Track see the projects website at dependencytrack.org Please note this application is not lightweight and uses 8-12GB of ram to run</Overview>
   <Category>Security:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -24,7 +24,7 @@ For more details about Dependency-Track see the projects website at dependencytr
   <DonateLink/>
   <Description>API Server to be used with Dependency-Track Front-End&#xD;
 Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain. Dependency-Track takes a unique and highly beneficial approach by leveraging the capabilities of Software Bill of Materials (SBOM). This approach provides capabilities that traditional Software Composition Analysis (SCA) solutions cannot achieve.&#xD;
-For more details about Dependency-Track see the projects website at dependencytrack.org</Description>
+For more details about Dependency-Track see the projects website at dependencytrack.org Please note this application is not lightweight and uses 8-12GB of ram to run</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
