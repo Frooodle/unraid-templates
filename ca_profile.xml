@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/Frooodle/unraid-templates/main/logos/Froodle.png</Icon>
+  <Profile>
+    Hopefully working on more CICD related things in future, maybe also plex related things. Feel free to PM me for help.
+  </Profile>
+  <DonateLink>https://www.paypal.com/paypalme/FroodlePlex</DonateLink>
+  <DonateText>
+    You shouldn't donate, I have not made these docker images only did some config.. 
+  But if you really want to, thanks :)
+  </DonateText>
+</Maintainer>
