@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Cleanarr</Name>
+  <Repository>selexin/cleanarr</Repository>
+  <Registry>https://hub.docker.com/r/selexin/cleanarr/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/se1exin/cleanarr/issues/</Support>
+  <Project>https://github.com/se1exin/cleanarr</Project>
+  <Overview>A simple UI to help find and delete duplicate and sample files from your Plex server. Updated for persistant config</Overview>
+  <Category>MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Alphacosmos/unraid-templetes/master/Cleanarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Frooodle/unraid-templates/main/icons/cleanarr.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1651365103</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A simple UI to help find and delete duplicate and sample files from your Plex server. More info at https://github.com/se1exin/cleanarr</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cleanarr/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Labels/>
+  <Config Name="PLEX_BASE_URL" Target="PLEX_BASE_URL" Default="http://192.168.1.100:32400" Mode="" Description="(required) Plex Server Address (e.g. http://192.169.1.100:32400)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="(required) A valid Plex token for your Plex Server " Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="LIBRARY_NAMES" Target="LIBRARY_NAMES" Default="Films;TV" Mode="" Description="(Required) Name(s) of your Plex Libraries to search. ';' Seperated" Type="Variable" Display="always" Required="false" Mask="false">Films;TV</Config>
+  <Config Name="BYPASS_SSL_VERIFY" Target="BYPASS_SSL_VERIFY" Default="0" Mode="" Description="Use this as '1' if your Plex Server has SSL Auth " Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PORT" Target="80" Default="" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="CONFIG_PATH" Target="/config" Default="" Mode="rw" Description="(required) Volume mount for config directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cleanarr/</Config>
+</Container>
