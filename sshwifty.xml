@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sshwifty</Name>
+  <Repository>niruix/sshwifty</Repository>
+  <Registry>https://hub.docker.com/r/niruix/sshwifty</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/nirui/sshwifty</Support>
+  <Project>https://github.com/nirui/sshwifty</Project>
+  <Overview>Sshwifty is a SSH and Telnet connector made for the Web. It can be deployed on your computer or server to provide SSH and Telnet access interface for any compatible (standard) web browser.&#xD;
+For support in chrome website must run in HTTPS mode, as such a .crt and .key file must be privded in /mnt/user/appdata/sshwifty/certs/&#xD;
+Supports configuration file for hosts with passwords/private key matches prepopulated&#xD;
+https://github.com/nirui/sshwifty</Overview>
+  <Category>Tools: Network:Web Network:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8182]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Frooodle/unraid-templates/main/icons/sshwifty.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1655068987</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Sshwifty is a SSH and Telnet connector made for the Web. It can be deployed on your computer or server to provide SSH and Telnet access interface for any compatible (standard) web browser.&#xD;
+For support in chrome website must run in HTTPS mode, as such a .crt and .key file must be privded in /mnt/user/appdata/sshwifty/certs/&#xD;
+Supports configuration file for hosts with passwords/private key matches&#xD;
+https://github.com/nirui/sshwifty</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8182</HostPort>
+        <ContainerPort>8182</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sshwifty/certs/</HostDir>
+      <ContainerDir>/certs/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sshwifty/config/</HostDir>
+      <ContainerDir>/home/sshwifty/.config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/certs/cert.crt</Value>
+      <Name>SSHWIFTY_TLSCERTIFICATEFILE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/certs/cert.key</Value>
+      <Name>SSHWIFTY_TLSCERTIFICATEKEYFILE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="8182" Default="" Mode="tcp" Description="Container Port: 8182" Type="Port" Display="always" Required="false" Mask="false">8182</Config>
+  <Config Name="Host Key 1" Target="SSHWIFTY_TLSCERTIFICATEFILE" Default="" Mode="" Description="Container Variable: TLSCertificateFile" Type="Variable" Display="always" Required="false" Mask="false">/certs/cert.crt</Config>
+  <Config Name="Host Key 2" Target="SSHWIFTY_TLSCERTIFICATEKEYFILE" Default="" Mode="" Description="Container Variable: SSHWIFTY_TLSCERTIFICATEKEYFILE" Type="Variable" Display="always" Required="false" Mask="false">/certs/cert.key</Config>
+  <Config Name="Certs" Target="/certs/" Default="" Mode="rw" Description="Container Path: /certs/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sshwifty/certs/</Config>
+  <Config Name="Configuration path for sshwifty.conf.json file" Target="/home/sshwifty/.config/" Default="" Mode="rw" Description="Configuration path for optional sshwifty.conf.json file" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sshwifty/config/</Config>
+</Container>
