@@ -27,5 +27,4 @@ Such as adding --schedule "0 0 4 * * *"  in order to have watchtower auto update
   <DonateLink/>
   <Requires/>
   <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="" Mode="rw" Description="Docker Socket" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
-  <Config Name="Optional Json" Target="/config.json" Default="" Mode="rw" Description="Optional not required config file for parameter passing" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/watchtower/config.json</Config>
 </Container>
