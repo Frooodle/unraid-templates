@@ -14,13 +14,13 @@
 For usage see https://containrrr.dev/watchtower/arguments/&#xD;
 &#xD;
 Arguements can be placed in the 'Post Arguments:' in unraid&#xD;
-Such as adding --schedule "0 0 4 * * *"  in order to have watchtower auto update at 4am every day</Overview>
+Such as adding --schedule "0 0 4 * * *"  in order to have watchtower auto update at 4am every day or --cleanup to remove old images after update </Overview>
   <Category>Other:</Category>
   <WebUI/>
   <TemplateURL/>
   <Icon>https://containrrr.dev/watchtower/images/logo-450px.png</Icon>
   <ExtraParams/>
-  <PostArgs>--schedule "0 0 4 * * *" </PostArgs>
+  <PostArgs>--schedule "0 0 4 * * *" --cleanup</PostArgs>
   <CPUset/>
   <DateInstalled>1655309545</DateInstalled>
   <DonateText/>
