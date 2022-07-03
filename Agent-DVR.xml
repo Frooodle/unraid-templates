@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Agent-DVR</Name>
+  <Repository>doitandbedone/ispyagentdvr</Repository>
+  <Registry>https://hub.docker.com/r/doitandbedone/ispyagentdvr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.ispyconnect.com/</Project>
+  <Overview>Agent DVR (next gen version of iSpy) is a super advanced video surveillance platform&#xD;
+Supports multiple camera types, sensor types, recordings and alerts&#xD;
+Agent DVR is the only DVR solution that doesn&#x2019;t need port forwarding.&#xD;
+That means no fiddly router setup or network security compromise for remote access.&#xD;
+UI works on all modern devices from phones to tablets and desktops.&#xD;
+</Overview>
+  <Category>Security: Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8090]</WebUI>
+  <TemplateURL/>
+  <Icon>https://ispycontent.azureedge.net/img/ispy2.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1656806924</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI Port" Target="8090" Default="" Mode="tcp" Description="WebUI Port" Type="Port" Display="always" Required="false" Mask="false">8090</Config>
+  <Config Name="TURN Server" Target="3478" Default="" Mode="udp" Description="Main port used for TURN server communication." Type="Port" Display="always" Required="false" Mask="false">3478</Config>
+  <Config Name="WebRTC" Target="50000" Default="" Mode="tcp" Description="Ports used to create connections or WebRTC. These will be used as needed.&#13;&#10;Additional 50000-50010 may be required based on use" Type="Port" Display="always" Required="false" Mask="false">50000</Config>
+  <Config Name="Config Path" Target="/agent/Media/XML/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/agentDVR/config</Config>
+  <Config Name="Media Path" Target="/agent/Media/WebServerRoot/Media/" Default="" Mode="rw" Description="This is where video recordings go, Place this in an unraid share if needed" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/agentDVR/media</Config>
+  <Config Name="Commands Path" Target="/agent/Commands" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/agentDVR/commands</Config>
+</Container>
