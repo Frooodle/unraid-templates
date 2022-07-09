@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/escapingnetwork/core-keeper-dedicated/issues</Support>
   <Project>https://github.com/escapingnetwork/core-keeper-dedicated/</Project>
-  <Overview>Docker file for the new Core Keeper dedicated server running frmo SteamCMD.&#xD;
+  <Overview>Docker file for the new Core Keeper dedicated server running from SteamCMD. (Not account etc needed)&#xD;
 &#xD;
 If your files do not load please check&#xD;
 https://github.com/escapingnetwork/core-keeper-dedicated/issues/5</Overview>
