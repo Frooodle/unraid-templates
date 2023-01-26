@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Doku</Name>
+  <Repository>amerkurev/doku</Repository>
+  <Registry>https://hub.docker.com/r/amerkurev/doku</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/amerkurev/doku</Project>
+  <Overview>Doku is a simple, lightweight web-based application that allows you to monitor Docker disk usage in a user-friendly manner. The Doku displays the amount of disk space used by the Docker daemon, splits by images, containers, volumes, and builder cache. If you're lucky, you'll also see the sizes of log files :)</Overview>
+  <Category>Other:</Category>
+  <WebUI>http://[IP]:[PORT:9090]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/amerkurev/doku/master/web/doku/public/favicon.ico</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1674766617</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Docker" Target="/var/run/docker.sock" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Port" Target="9090" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
+  <Config Name="Files for space checking" Target="/hostroot/mnt/user" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
+  <Config Name="Docker path for space checking" Target="/hostroot/var/lib/docker/" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="true" Mask="false">/var/lib/docker/</Config>
+</Container>
