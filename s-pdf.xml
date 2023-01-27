@@ -11,7 +11,7 @@
   <Project>https://github.com/Frooodle/Stirling-PDF/</Project>
   <Overview>Locally hosted web application that allows you to perform various operations on PDF files, such as merging, splitting and converting PDFs</Overview>
   <Category>Productivity: Tools: MediaApp:Books MediaApp:Other</Category>
-  <WebUI>http://[IP]:[PORT:8087]</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/src/main/resources/static/favicon.png</Icon>
   <ExtraParams/>
@@ -20,5 +20,5 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8087</Config>
+  <Config Name="port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
 </Container>
