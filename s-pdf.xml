@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/Frooodle/Stirling-PDF/issues</Support>
   <Project>https://github.com/Frooodle/Stirling-PDF/</Project>
-  <Overview/>
+  <Overview>Locally hosted web application that allows you to perform various operations on PDF files, such as merging, splitting and converting PDFs</Overview>
   <Category>Productivity: Tools: MediaApp:Books MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8087]</WebUI>
   <TemplateURL/>
