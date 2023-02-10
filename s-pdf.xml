@@ -13,7 +13,7 @@
   <Category>Productivity: Tools: MediaApp:Books MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
-  <Icon>https://github.com/Frooodle/Stirling-PDF/blob/fixesAndLang/docs/stirling.png?raw=true</Icon>
+  <Icon>https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/src/main/resources/static/favicon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
