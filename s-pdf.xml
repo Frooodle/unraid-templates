@@ -10,15 +10,23 @@
   <Support>https://github.com/Frooodle/Stirling-PDF/issues</Support>
   <Project>https://github.com/Frooodle/Stirling-PDF/</Project>
   <Overview>Locally hosted web application that allows you to perform various operations on PDF files, such as merging, splitting and converting PDFs</Overview>
-  <Category>Productivity: Tools: MediaApp:Books MediaApp:Other</Category>
+  <Category>Productivity: Tools:Utilities MediaApp:Books MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/Frooodle/unraid-templates/master/s-pdf.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/src/main/resources/static/favicon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DonateText/>
-  <DonateLink/>
+  <DateInstalled>1685996045</DateInstalled>
+  <DonateText>I am the developer of Stirling-PDF Feel free to donate if you like my app!</DonateText>
+  <DonateLink>https://www.paypal.com/paypalme/FroodlePlex</DonateLink>
   <Requires/>
-  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="APP_HOME_NAME" Target="APP_HOME_NAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Stirling PDF</Config>
+  <Config Name="APP_HOME_DESCRIPTION" Target="APP_HOME_DESCRIPTION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Your locally hosted one-stop-shop for all your PDF needs.</Config>
+  <Config Name="APP_NAVBAR_NAME" Target="APP_NAVBAR_NAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Stirling PDF</Config>
+  <Config Name="ALLOW_GOOGLE_VISIBILITY" Target="ALLOW_GOOGLE_VISIBILITY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="APP_ROOT_PATH" Target="APP_ROOT_PATH" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="APP_LOCALE" Target="APP_LOCALE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">en_GB</Config>
+  <Config Name="OCR" Target="/usr/share/tesseract-ocr/4.00/tessdata" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/OCR</Config>
 </Container>
