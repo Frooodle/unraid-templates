@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>S-PDF</Name>
-  <Repository>frooodle/s-pdf</Repository>
+  <Name>StirlingPDF</Name>
+  <Repository>frooodle/s-pdf:alpha</Repository>
   <Registry>https://hub.docker.com/r/frooodle/s-pdf</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -9,7 +9,13 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/Frooodle/Stirling-PDF/issues</Support>
   <Project>https://github.com/Frooodle/Stirling-PDF/</Project>
-  <Overview>Locally hosted web application that allows you to perform various operations on PDF files, such as merging, splitting and converting PDFs</Overview>
+  <Overview>Stirling PDF (S-PDF)&#xD;
+SPDF is a locally hosted web application that allows you to perform various operations on PDF files, such as merging, splitting and converting PDFs and more advanced features like OCR and compression&#xD;
+&#xD;
+Additional unraid docker settings in advanced section if required&#xD;
+The majority of variable settings override any settings in /configs/settings.yml&#xD;
+You can edit setting there instead of using docker variables if you want (You would need to remove them from docker to avoid override)&#xD;
+</Overview>
   <Category>Productivity: Tools:Utilities MediaApp:Books MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Frooodle/unraid-templates/master/s-pdf.xml</TemplateURL>
@@ -17,16 +23,18 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1685996045</DateInstalled>
-  <DonateText>I am the developer of Stirling-PDF Feel free to donate if you like my app!</DonateText>
+  <DateInstalled>1696719258</DateInstalled>
+  <DonateText>You shouldn't donate, I have not made these docker images only did some config..   But if you really want to, thanks :)</DonateText>
   <DonateLink>https://www.paypal.com/paypalme/FroodlePlex</DonateLink>
   <Requires/>
   <Config Name="port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
-  <Config Name="APP_HOME_NAME" Target="APP_HOME_NAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Stirling PDF</Config>
-  <Config Name="APP_HOME_DESCRIPTION" Target="APP_HOME_DESCRIPTION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Your locally hosted one-stop-shop for all your PDF needs.</Config>
-  <Config Name="APP_NAVBAR_NAME" Target="APP_NAVBAR_NAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Stirling PDF</Config>
-  <Config Name="ALLOW_GOOGLE_VISIBILITY" Target="ALLOW_GOOGLE_VISIBILITY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="APP_ROOT_PATH" Target="APP_ROOT_PATH" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/</Config>
-  <Config Name="APP_LOCALE" Target="APP_LOCALE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">en_GB</Config>
+  <Config Name="SYSTEM_GOOGLEVISIBILITY" Target="SYSTEM_GOOGLEVISIBILITY" Default="" Mode="" Description=" 'true' to allow Google visibility (via robots.txt), 'false' to disallow" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="SYSTEM_DEFAULT_LOCALE" Target="SYSTEM_DEFAULT_LOCALE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">en_GB</Config>
   <Config Name="OCR" Target="/usr/share/tesseract-ocr/4.00/tessdata" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/OCR</Config>
+  <Config Name="configs" Target="/configs" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/configs/</Config>
+  <Config Name="CustomFiles" Target="/customFiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/customFiles</Config>
+  <Config Name="DOCKER_ENABLE_SECURITY" Target="DOCKER_ENABLE_SECURITY" Default="" Mode="" Description="true to enable login and authentication functionality (uses additional resources)" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="METRICS_ENABLED" Target="METRICS_ENABLED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="SYSTEM_CONNECTIONTIMEOUTMINUTES" Target="SYSTEM_CONNECTIONTIMEOUTMINUTES" Default="" Mode="" Description="set custom connection timeout values" Type="Variable" Display="advanced" Required="false" Mask="false">3000000</Config>
+  <Config Name="SYSTEM_ROOT_URI_PATH" Target="SYSTEM_ROOT_URI_PATH" Default="" Mode="" Description="changes the websites root path, ie if set to pdf-app to application will be viewable at address localhost:8080/pdf-app instead of localhost:8080/" Type="Variable" Display="advanced" Required="false" Mask="false">/</Config>
 </Container>
