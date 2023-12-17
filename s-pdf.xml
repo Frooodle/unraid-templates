@@ -30,7 +30,7 @@ You can edit setting there instead of using docker variables if you want (You wo
   <Config Name="port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="SYSTEM_GOOGLEVISIBILITY" Target="SYSTEM_GOOGLEVISIBILITY" Default="" Mode="" Description=" 'true' to allow Google visibility (via robots.txt), 'false' to disallow" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="SYSTEM_DEFAULT_LOCALE" Target="SYSTEM_DEFAULT_LOCALE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">en_GB</Config>
-  <Config Name="OCR" Target="/usr/share/tesseract-ocr/4.00/tessdata" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/OCR</Config>
+  <Config Name="OCR" Target="/usr/share/tesseract-ocr/5/tessdata" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/OCR</Config>
   <Config Name="configs" Target="/configs" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/configs/</Config>
   <Config Name="CustomFiles" Target="/customFiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/customFiles</Config>
   <Config Name="DOCKER_ENABLE_SECURITY" Target="DOCKER_ENABLE_SECURITY" Default="" Mode="" Description="true to enable login and authentication functionality (uses additional resources)" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
