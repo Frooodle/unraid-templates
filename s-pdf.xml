@@ -19,7 +19,7 @@ You can edit setting there instead of using docker variables if you want (You wo
   <Category>Productivity: Tools:Utilities MediaApp:Books MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Frooodle/unraid-templates/master/s-pdf.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/src/main/resources/static/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/refs/heads/main/stirling-pdf/src/main/resources/static/favicon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
