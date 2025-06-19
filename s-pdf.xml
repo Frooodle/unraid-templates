@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>StirlingPDF</Name>
-  <Repository>frooodle/s-pdf:latest</Repository>
-  <Registry>https://hub.docker.com/r/frooodle/s-pdf</Registry>
+  <Repository>stirlingtools/stirling-pdf</Repository>
+  <Registry>https://hub.docker.com/r/stirlingtools/stirling-pdf</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/Frooodle/Stirling-PDF/issues</Support>
-  <Project>https://github.com/Frooodle/Stirling-PDF/</Project>
+  <Support>https://github.com/Stirling-Tools/Stirling-PDF/issues</Support>
+  <Project>https://github.com/Stirling-Tools/Stirling-PDF/</Project>
   <Overview>Stirling PDF (S-PDF)&#xD;
 SPDF is a locally hosted web application that allows you to perform various operations on PDF files, such as merging, splitting and converting PDFs and more advanced features like OCR and compression&#xD;
 &#xD;
@@ -24,8 +24,6 @@ You can edit setting there instead of using docker variables if you want (You wo
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1696719258</DateInstalled>
-  <DonateText>You shouldn't donate, I have not made these docker images only did some config..   But if you really want to, thanks :)</DonateText>
-  <DonateLink>https://www.paypal.com/paypalme/FroodlePlex</DonateLink>
   <Requires/>
   <Config Name="port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="SYSTEM_GOOGLEVISIBILITY" Target="SYSTEM_GOOGLEVISIBILITY" Default="" Mode="" Description=" 'true' to allow Google visibility (via robots.txt), 'false' to disallow" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
