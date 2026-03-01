@@ -19,7 +19,7 @@ You can edit setting there instead of using docker variables if you want (You wo
   <Category>Productivity: Tools:Utilities MediaApp:Books MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Frooodle/unraid-templates/master/s-pdf.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/refs/heads/main/stirling-pdf/src/main/resources/static/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/refs/heads/main/stirling-pdf/app/core/src/main/resources/static/favicon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -31,7 +31,6 @@ You can edit setting there instead of using docker variables if you want (You wo
   <Config Name="OCR" Target="/usr/share/tesseract-ocr/5/tessdata" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/OCR</Config>
   <Config Name="configs" Target="/configs" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/configs/</Config>
   <Config Name="CustomFiles" Target="/customFiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/customFiles</Config>
-  <Config Name="DOCKER_ENABLE_SECURITY" Target="DOCKER_ENABLE_SECURITY" Default="" Mode="" Description="true to enable login and authentication functionality (uses additional resources)" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="METRICS_ENABLED" Target="METRICS_ENABLED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="SYSTEM_CONNECTIONTIMEOUTMINUTES" Target="SYSTEM_CONNECTIONTIMEOUTMINUTES" Default="" Mode="" Description="set custom connection timeout values" Type="Variable" Display="advanced" Required="false" Mask="false">3000000</Config>
   <Config Name="SYSTEM_ROOT_URI_PATH" Target="SYSTEM_ROOT_URI_PATH" Default="" Mode="" Description="changes the websites root path, ie if set to pdf-app to application will be viewable at address localhost:8080/pdf-app instead of localhost:8080/" Type="Variable" Display="advanced" Required="false" Mask="false">/</Config>
