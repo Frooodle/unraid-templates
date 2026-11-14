@@ -18,7 +18,7 @@ You can edit setting there instead of using docker variables if you want (You wo
 </Overview>
   <Category>Productivity: Tools:Utilities MediaApp:Books MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/Frooodle/unraid-templates/master/s-pdf.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/Frooodle/unraid-templates/main/s-pdf.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/refs/heads/main/app/core/src/main/resources/static/favicon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
@@ -27,10 +27,14 @@ You can edit setting there instead of using docker variables if you want (You wo
   <Requires/>
   <Config Name="port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="SYSTEM_GOOGLEVISIBILITY" Target="SYSTEM_GOOGLEVISIBILITY" Default="" Mode="" Description=" 'true' to allow Google visibility (via robots.txt), 'false' to disallow" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="SYSTEM_DEFAULT_LOCALE" Target="SYSTEM_DEFAULT_LOCALE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">en-GB</Config>
+  <Config Name="SYSTEM_DEFAULTLOCALE" Target="SYSTEM_DEFAULTLOCALE" Default="" Mode="" Description="Default language for new users (e.g. en-GB, de-DE). Leave empty to detect from the browser" Type="Variable" Display="always" Required="false" Mask="false">en-GB</Config>
   <Config Name="configs" Target="/configs" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/configs/</Config>
   <Config Name="CustomFiles" Target="/customFiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/customFiles</Config>
+  <Config Name="storage" Target="/storage" Default="" Mode="rw" Description="Server-side file storage for saved and shared files" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/storage</Config>
+  <Config Name="logs" Target="/logs" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/logs</Config>
+  <Config Name="pipeline" Target="/pipeline" Default="" Mode="rw" Description="Watched folders and pipeline configs for automation" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/Stirling-PDF/pipeline</Config>
+  <Config Name="SECURITY_ENABLELOGIN" Target="SECURITY_ENABLELOGIN" Default="true" Mode="" Description="'true' to require login (user accounts, teams, file storage), 'false' for open access" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="METRICS_ENABLED" Target="METRICS_ENABLED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="SYSTEM_CONNECTIONTIMEOUTMINUTES" Target="SYSTEM_CONNECTIONTIMEOUTMINUTES" Default="" Mode="" Description="set custom connection timeout values" Type="Variable" Display="advanced" Required="false" Mask="false">3000000</Config>
-  <Config Name="SYSTEM_ROOT_URI_PATH" Target="SYSTEM_ROOT_URI_PATH" Default="" Mode="" Description="changes the websites root path, ie if set to pdf-app to application will be viewable at address localhost:8080/pdf-app instead of localhost:8080/" Type="Variable" Display="advanced" Required="false" Mask="false">/</Config>
+  <Config Name="SYSTEM_CONNECTIONTIMEOUTMILLISECONDS" Target="SYSTEM_CONNECTIONTIMEOUTMILLISECONDS" Default="1200000" Mode="" Description="Request timeout in milliseconds for long running operations" Type="Variable" Display="advanced" Required="false" Mask="false">1200000</Config>
+  <Config Name="SYSTEM_ROOTURIPATH" Target="SYSTEM_ROOTURIPATH" Default="" Mode="" Description="changes the websites root path, ie if set to pdf-app to application will be viewable at address localhost:8080/pdf-app instead of localhost:8080/" Type="Variable" Display="advanced" Required="false" Mask="false">/</Config>
 </Container>
